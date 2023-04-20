@@ -33,6 +33,19 @@ add_action( 'wp_enqueue_scripts', 'capitaine_register_assets' );
 
 //Déclarer les fonts
 function wpb_add_google_fonts() {
-    wp_enqueue_style( 'wpb-google-fonts', "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap", false );
+    wp_enqueue_style( 'wpb-google-fonts', "https://fonts.googleapis.com/css2?family=Pompiere&family=Rubik:wght@300;400;500;600&display=swap", false );
 }
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+
+//Alléger l'admin WP
+function capitaine_remove_menu_pages() {
+	remove_menu_page( 'tools.php' );
+    remove_menu_page( 'edit-comments.php' );
+}
+add_action( 'admin_menu', 'capitaine_remove_menu_pages' );
+
+//Déclarer 2 emplacements de menu : dans l'en-tête + en bas de page
+register_nav_menus( array(
+	'main' => 'Menu Principal',
+	'footer' => 'Bas de page',
+) );

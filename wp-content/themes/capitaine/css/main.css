@@ -10,21 +10,43 @@
 
 body {
   margin: 0;
+  background-color: white;
 }
 
 .header {
   display: flex;
-  justify-content: center;
-  background-color: #232634;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
 }
 .header .logo {
-  width: 30vw;
+  width: 10vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+.header .header-menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 32vw;
+  list-style-type: none;
+}
+
+a:-webkit-any-link {
+  color: #232634;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+a:hover {
+  font-weight: 500;
 }
 
 h1 {
   margin: 6vw 20vw 5vw 20vw;
   font-family: "Rubik", sans-serif;
-  font-weight: 300;
   color: #232634;
 }
 
@@ -113,4 +135,23 @@ ul {
 hr {
   width: 20vw;
   margin-bottom: 5vw;
+}
+
+.custom-accueil {
+  padding: 3vw 20vw 3vw 0;
+  margin-bottom: 5vw;
+  font-family: "Rubik", sans-serif;
+  color: #232634;
+  background: linear-gradient(90deg, rgb(208, 93, 243), rgb(245, 199, 19));
+}
+
+.quote-accueil {
+  display: flex;
+  justify-content: flex-end;
+  font-style: italic;
+}
+
+.author-accueil {
+  display: flex;
+  justify-content: flex-end;
 }/*# sourceMappingURL=main.css.map */

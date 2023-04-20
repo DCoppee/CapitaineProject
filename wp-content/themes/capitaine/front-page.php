@@ -11,4 +11,16 @@
 
 	<?php endwhile; endif; ?>
 
+<!--Custom Fields natifs de WP-->
+	<?php the_content(); ?>
+<div class="custom-accueil">
+	<div class="quote-accueil"> 
+    <?php echo get_post_meta( get_the_ID(), 'Quote', true ); ?>
+	</div>
+
+	<div class="author-accueil"> 
+		<?php echo get_post_meta( get_the_ID(), 'Author', true ); ?>
+	</div>
+</div>
+
 <?php get_footer(); ?>
