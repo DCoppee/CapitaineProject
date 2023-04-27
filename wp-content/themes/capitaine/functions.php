@@ -33,7 +33,7 @@ add_action( 'wp_enqueue_scripts', 'capitaine_register_assets' );
 
 //Déclarer les fonts
 function wpb_add_google_fonts() {
-    wp_enqueue_style( 'wpb-google-fonts', "https://fonts.googleapis.com/css2?family=Pompiere&family=Rubik:wght@300;400;500;600&display=swap", false );
+    wp_enqueue_style( 'wpb-google-fonts', "https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Pompiere&family=Rubik:wght@300;400;500;600&display=swap", false );
 }
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 
@@ -48,4 +48,14 @@ add_action( 'admin_menu', 'capitaine_remove_menu_pages' );
 register_nav_menus( array(
 	'main' => 'Menu Principal',
 	'footer' => 'Bas de page',
+) );
+
+//Déclarer la sidebar: au minimum slug + nom; ajout de paramètres pour s'affranchir du format <ul> par défaut
+register_sidebar( array(
+	'id' => 'blog-sidebar',
+	'name' => 'Blog',
+    'before_widget'  => '<div class="site__sidebar__widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title' => '<p class="site__sidebar__widget__title">',
+    'after_title' => '</p>',
 ) );

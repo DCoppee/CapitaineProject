@@ -1,11 +1,10 @@
-@charset "UTF-8";
 .menu {
   position: fixed;
   top: 0px;
 }
 
 .admin-bar .menu {
-  top: 32px; /* on prend en compte le décalage */
+  top: 32px;
 }
 
 body {
@@ -17,48 +16,146 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background: linear-gradient(180deg, rgb(199, 199, 251), rgb(255, 255, 255));
 }
 .header .logo {
-  width: 10vw;
-  padding-top: 5vw;
+  width: 12vw;
+  padding: 3vw 0 0 0;
+}
+.header .nom-header {
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+  font-variant: small-caps;
+  font-weight: 600;
+  letter-spacing: 1vw;
   padding-bottom: 5vw;
 }
 .header .header-menu {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding: 0;
-  width: 32vw;
+  padding: 1vw 0 3vw 0;
+  width: 38vw;
   list-style-type: none;
 }
 
 a:-webkit-any-link {
-  color: #232634;
+  color: #5A54BF;
   text-decoration: none;
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Josephin Sans", sans-serif;
+  font-size: 80%;
+  font-weight: 500;
 }
 
 a:hover {
-  font-weight: 500;
+  font-weight: 600;
+  color: white;
+}
+
+.search-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 16vw;
+}
+
+.search-bar {
+  height: 3vw;
+  border: none;
+  border-radius: 8px;
+  margin: 3vw 0 3vw 0;
+}
+
+.search-img {
+  width: 2vw;
+}
+
+.site__blog {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.site__content {
+  width: 70%;
+}
+
+.site__aside {
+  width: 30%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h2.wp-block-heading {
+  margin-right: 5vw;
+  color: #444093;
+  font-family: "Josephin Sans", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 700;
+  text-align: right;
+}
+
+.site__sidebar__widget.widget_block.widget_text p {
+  margin: 2vw 5vw 0 0;
+  color: #444093;
+  font-family: "Josephin Sans", sans-serif;
+  font-size: 1.5vw;
+}
+
+ul.wp-block-latest-posts__list.wp-block-latest-posts {
+  margin: 0 5vw 5vw 0;
+  line-height: 3vw;
+}
+
+a.wp-block-latest-posts__post-title {
+  color: #444093;
+  text-transform: none;
+}
+
+a.wp-block-latest-posts__post-title:hover {
+  color: #444093;
+  font-weight: 600;
+}
+
+ul.wp-block-archives-list.wp-block-archives {
+  margin: 0 5vw 5vw 0;
+  line-height: 3vw;
+  list-style-type: none;
+}
+
+.wp-block-archives-list.wp-block-archives a {
+  color: #444093;
+}
+
+.site__sidebar__widget.widget_block.widget_media_gallery {
+  margin-right: 5vw;
+}
+
+.wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) img {
+  border-radius: 3px;
 }
 
 h1 {
-  margin: 6vw 20vw 5vw 20vw;
+  margin: 6vw 5vw 5vw 8vw;
   font-family: "Rubik", sans-serif;
-  color: #232634;
+  font-weight: 300;
+  color: #5A54BF;
+  text-transform: uppercase;
 }
 
 h2 {
-  margin: 0 20vw 5vw 20vw;
+  margin: 0 5vw 5vw 8vw;
   font-family: "Rubik", sans-serif;
   font-weight: 500;
-  color: #232634;
+  color: #5A54BF;
 }
 
 h4 {
-  margin-left: 20vw;
+  margin-left: 8vw;
 }
 
 .post {
@@ -67,9 +164,10 @@ h4 {
 }
 
 .wp-post-image {
-  width: 60vw;
+  width: 50vw;
   height: auto;
-  margin-left: 20vw;
+  margin-left: 8vw;
+  border-radius: 3px;
 }
 
 img {
@@ -90,12 +188,12 @@ img {
   display: flex;
   align-items: center;
   font-size: 1.5vw;
-  margin: 5vw 0 4vw 20vw;
+  margin: 5vw 0 4vw 8vw;
 }
 
 .txt-post-meta {
   font-family: "Rubik", sans-serif;
-  margin: 0 20vw 0 2vw;
+  margin: 0 5vw 0 2vw;
 }
 
 .post-content {
@@ -103,10 +201,10 @@ img {
 }
 
 p {
-  margin: 0 20vw 5vw 20vw;
+  margin: 0 5vw 5vw 8vw;
   text-align: justify;
   font-family: "Rubik", sans-serif;
-  color: #4a4f67;
+  color: #5A54BF;
 }
 
 .post__link {
@@ -120,6 +218,7 @@ p {
 
 .post__link:hover {
   font-weight: 600;
+  color: #5A54BF;
 }
 
 blockquote {
@@ -128,7 +227,7 @@ blockquote {
 
 ul {
   font-family: "Rubik", sans-serif;
-  margin-left: 17vw;
+  margin-left: 5vw;
   margin-bottom: 5vw;
 }
 
@@ -138,7 +237,7 @@ hr {
 }
 
 .custom-accueil {
-  padding: 3vw 20vw 3vw 0;
+  padding: 3vw 5vw 3vw 0;
   margin-bottom: 5vw;
   font-family: "Rubik", sans-serif;
   color: #232634;
@@ -154,4 +253,35 @@ hr {
 .author-accueil {
   display: flex;
   justify-content: flex-end;
+}
+
+.site__navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.prev-icon {
+  width: 4vw;
+  height: 4vw;
+  margin-left: 23vw;
+}
+
+.next-icon {
+  width: 4vw;
+  height: 4vw;
+  margin-right: 20vw;
+}
+
+footer {
+  background: linear-gradient(0deg, rgb(199, 199, 251), rgb(255, 255, 255));
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding: 5vw 8vw 5vw 3vw;
+  width: 95%;
+  list-style-type: none;
 }/*# sourceMappingURL=main.css.map */
